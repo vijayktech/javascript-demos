@@ -1,0 +1,27 @@
+<script>
+    // 1. Object Literals
+    let obj1 = { car : 'Kia', model : 'sonet', year : 2021};
+
+    console.log(obj1);
+
+    // 2. using Object.create() function
+    let obj2 = Object.create(obj1);
+    console.log(obj2);
+
+    // 3. using new 
+    let obj3 = new Object(obj1);    
+    console.log(obj3);
+
+    // 4. Class and Object
+    class Employee {
+        constructor(id, name, sal){
+            this.id = id;
+            this.name = name;
+            this.sal = sal;
+        }
+    }
+
+    let emp1 = new Employee(105, 'Vijay', 3000)
+    console.log(emp1);
+
+</script>

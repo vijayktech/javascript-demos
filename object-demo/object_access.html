@@ -1,0 +1,29 @@
+<script>
+    let user = {name : 'sachin', age : 40, add : 'Mum'};
+    
+    // Two ways can access the object
+    console.log(user.name);
+    console.log(user['name']);  // use single quatoes 
+
+    let emp = {'first name': 'Vijay kumar', role : 'Architect',  sal:6000}
+    
+    // console.log(emp.first name); // will give error
+    
+    // 1. if the key contains a space, then use []
+    console.log(emp['first name']); 
+
+    // 2. when the key is stored as a value in a variable then use key in []
+    let a = 'role';
+    console.log(emp.a); // undefined
+    console.log(emp[a]);
+
+    // While Iterating object
+    for( key in emp ){
+        console.log(key+' => ' + emp[key]);
+    }
+
+    // length of emp obj
+    let keyArr = Object.keys(emp);
+    console.log(keyArr.length);
+
+</script>
