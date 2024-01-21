@@ -1,0 +1,23 @@
+<script>
+    /**
+     *  Swap The case for Each Character in a string 
+   * input: 'Hello World'
+   * output: 'hELLO wORLD'
+    */
+
+    let str = 'Hello World';
+    
+    let strArr = str.split('');
+    let strNew = '';
+    for(s of strArr){
+        if(s == s.toUpperCase())
+        {
+            strNew = strNew.concat(s.toLowerCase())
+        }
+        if(s == s.toLowerCase()) {
+            strNew = strNew.concat(s.toUpperCase())
+        }
+        
+    }
+        console.log(strNew);
+</script>

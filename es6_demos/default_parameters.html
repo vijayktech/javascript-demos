@@ -1,0 +1,20 @@
+<script>
+    // ES 5 
+    function add(a, b, c){
+        a = a | 0;
+        b = b | 0;
+        c = c | 0; // if don't give default value then output is NaN
+
+        console.log(a + b + c);
+    }
+
+    add(1, 2, 3);
+    add(1,2);
+
+    // provide default value at function parameters
+    function sum(a, b, c=0){ // c=0 default parameter value
+        console.log(a + b + c);
+    }
+
+    sum(1,2);
+</script>

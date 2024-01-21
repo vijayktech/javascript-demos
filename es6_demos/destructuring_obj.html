@@ -1,0 +1,23 @@
+<script>
+    // ES 5
+    let user = {name : 'Vijay', age : 35, add : 'hyd' };
+
+    // assign each obj property to variable individually 
+    let a = user.name;
+    let b = user.age;
+    let c = user.add;
+
+    console.log(a, b, c);
+
+    // ES 6
+    let {name, age, add} = user;
+    console.log(name, age, add);
+
+    let { p, q } = user; // ES-6 , but not working need to check
+    console.log(p, q);
+
+    // ES-6
+    let {name : x} = user;
+    console.log(x);
+
+</script>

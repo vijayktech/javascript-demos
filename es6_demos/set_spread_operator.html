@@ -1,0 +1,15 @@
+<script>
+    let arr = [10, 20, 40, 55, 23, 40, 50, 66, 20];
+    console.log(arr);
+    console.log('size of the arr'+arr.length);
+   
+    // need to display unique values then use Set.
+    let uniqueSet = new Set(arr);
+    console.log('size of the arr'+uniqueSet.size);
+    console.log(uniqueSet);
+
+    //spread operator
+    let uniqueArr = [...uniqueSet];
+    console.log(uniqueArr);
+
+</script>

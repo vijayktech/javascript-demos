@@ -1,0 +1,22 @@
+<script>
+    //  Print the character which is repeated max no of times
+
+    let str = 'hello world';
+    let strArr = str.split('');
+    let maxChar = '';
+    let maxCharCnt = 0;
+
+    for(s of strArr){
+       let maxCharCntNew = strArr.filter(strmatch => strmatch ==  s).length;
+        // console.log('char-'+s+' matches: '+maxCharNew);
+        if(maxCharCntNew > maxCharCnt)
+        {
+            maxCharCnt =  maxCharCntNew;
+            maxChar = s;
+        }
+    }
+    console.log('char-'+maxChar+' matches: '+maxCharCnt);
+    
+
+
+</script>

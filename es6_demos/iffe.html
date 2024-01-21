@@ -1,0 +1,29 @@
+<script>
+    // IIFE -> Immediatly Inovked Function Expression, 
+    // Usecase - use when one time invoking the function
+
+    function test1(){
+        if(5 == 5){
+            //IIFE
+            (function (){
+                var name = 'vijay'
+                console.log(`inside blcok name: ${name}`); 
+            })();
+        }
+        console.log(`outside blcok name: ${name}`)  // empty string
+    }
+
+    test1();
+
+    // without IIFE
+    function test2(){
+        // block
+        {
+            var name = 'Kumar'
+            console.log(`inside blcok name: ${name}`);  // Kumar
+        }
+        console.log(`outside blcok name: ${name}`); // Kumar
+    }
+    test2();
+
+</script> 
