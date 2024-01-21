@@ -1,0 +1,35 @@
+<script>
+    // ES 6 - class depency of address to Student
+    
+    // Class declaration
+    class Address{
+        street;
+        city; 
+        pin;
+        constructor(street, city, pin){
+            this.street = street;
+            this.city = city;
+            this.pin = pin;
+        }        
+    }
+
+    class Student{
+        constructor(studentId, name, add, course){
+            this.studentId = studentId;
+            this.name = name;
+            this.add = add;
+            this.course = course;
+        }
+    }
+
+    let add1 = new Address('My street', 'hyd', '50000');
+    let st1 = new Student(10, 'Vijay', add1, 'ReactJs');
+
+    let add2 = new Address('Your street', 'Bang', '60000');
+    let st2 = new Student(15, 'Kumar', add2, 'Angular');
+
+    console.log(st1, st2);
+
+
+
+</script>
