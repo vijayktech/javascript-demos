@@ -1,0 +1,35 @@
+<script>
+    class Person{
+        constructor(name, address){
+            this.name = name;
+            this.address = address;
+        }
+    }
+
+    class Employee extends Person{
+        empId;
+        sal;
+        constructor(name, address, empId, sal){
+            super(name, address)
+            this.empId = empId;
+            this.sal = sal;
+        }
+    }
+
+    class Student extends Person{
+        studId;
+        course;
+
+        constructor(name, address, studId, course){
+            super(name, address);
+            this.studId = studId;
+            this.course = course;
+        }
+    }
+
+    let emp1 = new Employee('John', 'New york', 101, 1100);
+    let stud1 = new Student('Smith', 'California', 15, 'ReactJS');
+
+    console.log(emp1, stud1);
+
+</script>
