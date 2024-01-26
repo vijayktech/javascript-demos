@@ -1,0 +1,15 @@
+<script>
+    let res1 = Math.max(10,30,20,25);
+    console.log(res1);
+
+    let arr = [20, 10,40,30];
+    let res2 = Math.max(arr);
+    console.log(res2); // NaN, because 
+    console.log(typeof arr); // object
+
+    let res3 = Math.max.apply({}, arr); // apply() converts to object to number and supply to Math.max() function.
+    console.log(res3);
+
+    let res4 = Math.max(...arr); // using spread operator
+    console.log(res4);
+</script>

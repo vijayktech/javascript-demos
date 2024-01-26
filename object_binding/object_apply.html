@@ -1,0 +1,20 @@
+<script>
+
+    function add(a, b){
+        console.log(this.num + a + b); // this = window when call from add(2,3)
+                                       // this = num when call from add.call(obj1, 2, 3);     
+    }
+
+    add(2,3);
+
+    let obj1 = {num :4};
+    add.call(obj1, 2, 3); 
+
+    let arr = [2,3,4,5];
+    add.call(obj1, arr); // inside add() -> this = obj1, a = arr, b is undefined. 
+    
+    // apply() takes 2 arguments.1st arguement is an object(this), 2nd arguement is an array of items.
+    add.apply(obj1, arr); // inside add() -> this = obj1, a = 2, b=3
+
+
+</script>

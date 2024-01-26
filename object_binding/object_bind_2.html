@@ -1,0 +1,23 @@
+<script>
+    let obj1 = {
+        name : 'Vijay',
+        displayName: function(){
+            console.log(`Name is ${this.name}`)
+        }
+    }
+
+    obj1.displayName(); // this = obj1
+
+    let f1 = obj1.displayName;
+    f1(); // this = window, hence name is empty
+
+    let f2 = obj1.displayName.bind(obj1);
+    f2(); // this = obj1
+
+    let f3 = f2;
+    f3(); // this = obj1
+
+    let f4 = f3;
+    f4(); // this = obj1
+
+</script>

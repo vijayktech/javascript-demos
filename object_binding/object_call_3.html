@@ -1,0 +1,16 @@
+<script>
+    var name = 'Vijay';
+
+    function sayHello(){
+        console.log(`Hello ${this.name}`);
+    }
+
+    sayHello();
+
+    let obj1 = { name : 'Dhanu'};
+    let obj2 = {name : 'Dhruvika'};
+
+    sayHello.call(obj1); // this = obj1 of inside sayHello() function
+    sayHello.call(obj2); // this = obj2 of inside sayHello() function
+
+</script>

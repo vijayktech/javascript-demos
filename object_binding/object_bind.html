@@ -1,0 +1,17 @@
+<script>
+    class Employee{
+        name = 'Vijay';
+        sayHello(){
+            console.log(`Hello ${this.name}`);
+        }
+    }
+
+   let empObj = new Employee() ;
+   empObj.sayHello(); // this = Employee();
+
+   setTimeout(empObj.sayHello, 2000); // this = window after setTimeout() using. 
+
+   let newEmpobj = empObj.sayHello.bind(empObj); 
+   setTimeout(newEmpobj, 3000); // after timeout, bindding this=Epmployee instead of window. 
+
+</script>

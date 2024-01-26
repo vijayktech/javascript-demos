@@ -1,0 +1,22 @@
+<script>
+    let obj1 = {
+        a:10,
+        b:20,
+        add: function() {
+            console.log(this.a + this.b);
+        }
+    }
+
+    obj1.add(); // add() function contains this=obj1
+
+    let obj2 = {
+        a: 15,
+        b: 25
+    }
+
+    // obj2.add(); gives Undefined.
+
+    //  call() is used to pass differenet object as a value to 'this'.
+    obj1.add.call(obj2); // add() function contains this=obj2
+
+</script>
