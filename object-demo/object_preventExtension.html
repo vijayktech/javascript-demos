@@ -1,0 +1,16 @@
+<script>
+
+// preventExtensions() -new properties cann't be added to an object, properties can be deleted, value of the properties can be changed
+    let obj = {x:100, y:200};
+    Object.preventExtensions(obj);
+
+    obj.x = 140;
+    console.log(obj);
+
+    obj.z = 300; // no effect
+    console.log(obj);
+
+    delete obj.x; // it's effect
+    console.log(obj);
+
+</script>

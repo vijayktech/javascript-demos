@@ -1,0 +1,23 @@
+<script>
+     let obj1 = {a:10, b:20};
+    obj1.c = 30;
+    console.log(obj1);
+
+    delete obj1.b;
+    console.log(obj1);
+    console.log(Object.isFrozen(obj1));
+
+    // seal()  - structure of the object cann't be modified, value of the properties can be changed
+    console.log('Seal demo')
+    let obj2 = {x:100, y:200};
+    Object.seal(obj2);
+    console.log(obj2);
+    obj2.y = 220; // change value
+    console.log(obj2);
+
+    obj2.z = 300; // no effect
+    console.log(obj2);
+    delete obj2.x; // no effect
+
+    console.log(Object.isSealed(obj2));
+</script>

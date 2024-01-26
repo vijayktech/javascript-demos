@@ -1,0 +1,17 @@
+<script>
+    let user = {name: 'Vijay', age:40, add: 'Hyd'};
+
+    let objKeys = Object.keys(user);
+    console.log(objKeys);
+
+    let objValues = Object.values(user);
+    console.log(objValues);
+
+    let objEntries = Object.entries(user);
+    console.log(objEntries);
+
+    // fromEntries() - transforms an array/Map into an Object
+    let userObj = Object.fromEntries(objEntries);
+    console.log(userObj);
+
+</script>

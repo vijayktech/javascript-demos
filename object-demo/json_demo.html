@@ -1,0 +1,15 @@
+<script>
+    let user = {name: 'Vijay', age:40, add: 'Hyd'};
+    console.log(typeof user);
+
+    let userStr = JSON.stringify(user);
+    console.log(userStr, typeof userStr);
+
+    // cann't read property after convert to string
+    console.log(userStr.name);
+
+    let userObj = JSON.parse(userStr);
+    console.log(userObj, typeof userObj);
+
+    console.log(userObj.name);
+</script>

@@ -1,0 +1,20 @@
+<script>
+    let obj1 = {a:10, b:20};
+    obj1.c = 30;
+    console.log(obj1);
+
+    delete obj1.b;
+    console.log(obj1);
+    console.log(Object.isFrozen(obj1));
+
+    let obj2 = {x:100, y:200};
+    // Object.freeze() -> Freezes an object. neither the structure nor values can be changed
+    Object.freeze(obj2);
+    console.log(obj2);
+    obj2.z = 250;
+    console.log(obj2);
+    delete obj2.x;
+    console.log(obj2);
+    console.log(Object.isFrozen(obj2));
+
+</script>
